@@ -1,0 +1,607 @@
+/*
+  POWER GYM — estilos de la página
+  Paleta permitida (no usar otros colores):
+    #FF5A36  naranja principal
+    #FF3D1F  rojo/naranja de acento
+    #FFFFFF  blanco
+    #F2F2F0  gris claro
+    #252525  gris oscuro
+  Sombras y overlays usan estos mismos colores con transparencia.
+*/
+
+/* ---------- Variables y reset ---------- */
+:root {
+  --naranja: #FF5A36;
+  --acento: #FF3D1F;
+  --blanco: #FFFFFF;
+  --gris-claro: #F2F2F0;
+  --oscuro: #252525;
+
+  --header-h: 76px;
+  --radio: 12px;
+  --sombra: 0 10px 28px rgba(37, 37, 37, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--oscuro);
+  background: var(--blanco);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-family: "Oswald", Arial, sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin-inline: auto;
+}
+
+/* El header es fijo: las anclas no quedan tapadas */
+section[id] {
+  scroll-margin-top: var(--header-h);
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--naranja);
+  color: var(--blanco);
+  box-shadow: 0 8px 20px rgba(255, 90, 54, 0.35);
+}
+
+.btn-primary:hover {
+  background: var(--acento);
+}
+
+.btn-dark {
+  background: var(--oscuro);
+  color: var(--blanco);
+  border-bottom: 3px solid var(--naranja);
+}
+
+.btn-dark:hover {
+  background: var(--naranja);
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--header-h);
+  background: var(--oscuro);
+  box-shadow: 0 4px 18px rgba(37, 37, 37, 0.35);
+}
+
+.header-inner {
+  width: min(1120px, 92%);
+  height: 100%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--blanco);
+  letter-spacing: 0.12em;
+}
+
+.logo span {
+  color: var(--naranja);
+}
+
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-btn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: 8px;
+}
+
+.menu-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--blanco);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.main-nav a {
+  color: var(--blanco);
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s ease;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--naranja);
+  transition: width 0.25s ease;
+}
+
+.main-nav a:hover {
+  color: var(--naranja);
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(var(--header-h) + 2rem) 1.25rem 3rem;
+  position: relative;
+  /* Imagen de gimnasio a pantalla completa */
+  background:
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80")
+    center / cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(37, 37, 37, 0.72);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.hero-kicker {
+  color: var(--naranja);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.hero h1 {
+  color: var(--blanco);
+  font-size: clamp(2rem, 5.4vw, 3.6rem);
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  color: var(--gris-claro);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------- Beneficios ---------- */
+.benefits {
+  background: var(--gris-claro);
+  padding: 5rem 0;
+}
+
+.benefits h2,
+.about h2,
+.contact h2 {
+  text-align: center;
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  margin-bottom: 0.75rem;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.75rem;
+  color: var(--oscuro);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.card {
+  background: var(--blanco);
+  padding: 1.7rem 1.4rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  border-top: 4px solid var(--naranja);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--acento);
+  box-shadow: 0 16px 32px rgba(37, 37, 37, 0.22);
+}
+
+.card-icon {
+  color: var(--naranja);
+  margin-bottom: 0.85rem;
+}
+
+.card h3 {
+  color: var(--acento);
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.97rem;
+}
+
+/* ---------- Sobre nosotros ---------- */
+.about {
+  background: var(--oscuro);
+  color: var(--blanco);
+  padding: 5rem 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  border-radius: var(--radio);
+  border: 3px solid var(--naranja);
+}
+
+.about h2 {
+  text-align: left;
+  color: var(--blanco);
+  margin-bottom: 1.1rem;
+}
+
+.about h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  background: var(--naranja);
+  margin-top: 0.7rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  color: var(--gris-claro);
+}
+
+.about-text strong {
+  color: var(--naranja);
+  font-weight: 700;
+}
+
+.about .btn {
+  margin-top: 0.6rem;
+}
+
+/* ---------- Contacto ---------- */
+.contact {
+  background: var(--gris-claro);
+  padding: 5rem 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.contact-card {
+  background: var(--blanco);
+  padding: 1.8rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.contact-card h3 {
+  color: var(--naranja);
+  margin-bottom: 1.1rem;
+  font-size: 1.2rem;
+}
+
+.social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.75rem 1rem;
+  background: var(--oscuro);
+  color: var(--blanco);
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.social-btn:hover {
+  background: var(--naranja);
+  transform: translateY(-2px);
+}
+
+.contact-list li {
+  margin-bottom: 1rem;
+}
+
+.contact-list .label {
+  display: block;
+  font-weight: 700;
+  color: var(--naranja);
+  margin-bottom: 0.15rem;
+}
+
+.contact-list a {
+  color: var(--oscuro);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-list a:hover {
+  color: var(--acento);
+  border-color: var(--acento);
+}
+
+/* ---------- Botón flotante WhatsApp ---------- */
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--naranja);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 22px rgba(37, 37, 37, 0.4);
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  background: var(--acento);
+  transform: scale(1.08);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--oscuro);
+  color: var(--blanco);
+  padding-top: 3.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.footer-brand .logo {
+  margin-bottom: 0.8rem;
+}
+
+.footer-brand p {
+  color: var(--gris-claro);
+  font-size: 0.95rem;
+}
+
+.site-footer h3 {
+  color: var(--naranja);
+  font-size: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.45rem;
+}
+
+.footer-links a {
+  color: var(--blanco);
+  transition: color 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: var(--naranja);
+}
+
+.site-footer p {
+  color: var(--gris-claro);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(242, 242, 240, 0.12);
+  text-align: center;
+  padding: 1.1rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-grid,
+  .contact-grid,
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-grid {
+    gap: 2rem;
+  }
+
+  .about-image img {
+    min-height: 280px;
+  }
+}
+
+/* Celular */
+@media (max-width: 700px) {
+  .menu-btn {
+    display: flex;
+  }
+
+  /* Menú desplegable (se muestra cuando el checkbox está marcado) */
+  .main-nav {
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    background: var(--oscuro);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 0.9rem 8%;
+  }
+
+  .menu-toggle:checked ~ .main-nav {
+    max-height: 280px;
+    box-shadow: 0 12px 20px rgba(37, 37, 37, 0.35);
+  }
+
+  /* Animación de las 3 rayas a una "X" */
+  .menu-toggle:checked + .menu-btn span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle:checked + .menu-btn span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked + .menu-btn span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .cards-grid,
+  .about-grid,
+  .contact-grid,
+  .footer-grid,
+  .social-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .about h2 {
+    text-align: center;
+  }
+
+  .about h2::after {
+    margin-inline: auto;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .whatsapp-float {
+    width: 56px;
+    height: 56px;
+    right: 16px;
+    bottom: 16px;
+  }
+}

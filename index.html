@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POWER GYM | Superá tus límites</title>
+  <meta name="description" content="Power Gym: entrená con disciplina, constancia y superación. Equipamiento moderno, entrenadores capacitados y planes personalizados.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#inicio" class="logo" aria-label="POWER GYM - Ir al inicio">
+        POWER <span>GYM</span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-btn" aria-label="Abrir o cerrar menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / INICIO -->
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-kicker">Fuerza · Disciplina · Superación</p>
+        <h1>SUPERÁ TUS LÍMITES.<br>CONVERTITE EN TU MEJOR VERSIÓN.</h1>
+        <p class="hero-subtitle">Entrená hoy. Sé más fuerte mañana.</p>
+        <a href="#contacto" class="btn btn-primary">COMENZAR AHORA</a>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="beneficios" class="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <h2 id="benefits-title">¿POR QUÉ ELEGIR POWER GYM?</h2>
+        <p class="section-intro">
+          Un espacio pensado para quienes quieren resultados reales.
+          Entrená con propósito, constancia y el respaldo de un equipo que te empuja a dar más.
+        </p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <!-- Icono de pesa (SVG) -->
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 8v8M18 8v8M4 10v4M20 10v4M6 12h12"/>
+              </svg>
+            </div>
+            <h3>Equipamiento moderno</h3>
+            <p>Máquinas, pesos libres y zonas de fuerza listas para cada etapa de tu entrenamiento.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="7" r="3"/>
+                <path d="M6 20v-1a6 6 0 0 1 12 0v1"/>
+              </svg>
+            </div>
+            <h3>Entrenadores capacitados</h3>
+            <p>Profesionales que te corrigen, te motivan y te acompañan para que progreses con seguridad.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19V5M4 19h16M8 16V9M12 16V7M16 16v-4"/>
+              </svg>
+            </div>
+            <h3>Planes personalizados</h3>
+            <p>Rutinas adaptadas a tu nivel, tus horarios y tus objetivos: fuerza, hipertrofia o salud.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/>
+              </svg>
+            </div>
+            <h3>Ambiente motivador</h3>
+            <p>Una comunidad que entrena en serio. Energía, respeto y ganas de superarse todos los días.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 3"/>
+              </svg>
+            </div>
+            <h3>Horarios flexibles</h3>
+            <p>Abrimos temprano y cerramos tarde para que el entrenamiento entre en tu rutina, no al revés.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 3l2.2 6.6H21l-5.4 4 2.1 6.5L12 16.6 6.3 20.1l2.1-6.5L3 9.6h6.8L12 3z"/>
+              </svg>
+            </div>
+            <h3>Resultados reales</h3>
+            <p>Constancia + método. Medimos tu progreso y te ayudamos a sostener el hábito hasta ver el cambio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="sobre-nosotros" class="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80"
+            alt="Persona entrenando fuerza en Power Gym">
+        </div>
+
+        <div class="about-text">
+          <h2 id="about-title">SOBRE NOSOTROS</h2>
+          <p>
+            En Power Gym creemos que entrenar no es solamente cambiar tu cuerpo,
+            sino también superar tus propios límites. Creamos un espacio donde cada
+            persona pueda entrenar, progresar y alcanzar sus objetivos.
+          </p>
+          <p>
+            Acá se valora la <strong>disciplina</strong>, la <strong>constancia</strong>
+            y el <strong>esfuerzo</strong>. No buscamos atajos: buscamos el trabajo
+            bien hecho, el hábito que se sostiene y la superación personal que se
+            construye repetición a repetición.
+          </p>
+          <p>
+            Si estás listo para exigirte más, este es tu lugar.
+            Motivación todos los días. Resultados con el tiempo.
+          </p>
+          <a href="#contacto" class="btn btn-dark">CONOCÉ MÁS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">CONTACTANOS</h2>
+        <p class="section-intro">
+          Escribinos, visitanos o seguinos. El primer paso hacia tu mejor versión empieza acá.
+        </p>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>Redes y mensajes</h3>
+            <div class="social-buttons">
+              <a class="social-btn" href="https://instagram.com/powergym" target="_blank" rel="noopener noreferrer">
+                Instagram
+              </a>
+              <a class="social-btn" href="https://facebook.com/powergym" target="_blank" rel="noopener noreferrer">
+                Facebook
+              </a>
+              <a class="social-btn" href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
+                WhatsApp
+              </a>
+              <a class="social-btn" href="mailto:info@powergym.com">
+                Email
+              </a>
+            </div>
+          </article>
+
+          <article class="contact-card">
+            <h3>Datos del gimnasio</h3>
+            <ul class="contact-list">
+              <li>
+                <span class="label">Email</span>
+                <a href="mailto:info@powergym.com">info@powergym.com</a>
+              </li>
+              <li>
+                <span class="label">Dirección</span>
+                Av. del Entrenamiento 1234, Buenos Aires
+              </li>
+              <li>
+                <span class="label">Horarios</span>
+                Lunes a viernes: 6:00 a 23:00<br>
+                Sábados: 8:00 a 20:00<br>
+                Domingos: 9:00 a 14:00
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/5491112345678"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Escribir por WhatsApp">
+    <!-- Icono simplificado de chat / WhatsApp -->
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+      <path fill="#FFFFFF" d="M12.04 2C6.58 2 2.15 6.43 2.15 11.89c0 1.76.46 3.48 1.34 5L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.89-4.43 9.89-9.89C21.94 6.43 17.5 2 12.04 2zm5.76 14.13c-.24.68-1.4 1.26-1.93 1.34-.49.07-1.1.1-1.77-.11-.41-.13-.93-.3-1.6-.59-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.08 1-2.36.24-.27.64-.39.86-.39h.62c.2 0 .47-.06.73.56.27.64.91 2.22.99 2.38.08.16.13.35.03.56-.1.22-.16.35-.31.54-.16.19-.33.42-.47.56-.16.16-.32.34-.14.66.19.32.83 1.37 1.78 2.22 1.23 1.1 2.26 1.44 2.58 1.6.32.16.5.13.69-.08.19-.22.8-.93 1.02-1.25.21-.32.43-.27.73-.16.3.1 1.9.9 2.23 1.06.33.16.55.24.63.38.08.13.08.77-.16 1.45z"/>
+    </svg>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="logo">POWER <span>GYM</span></p>
+        <p>
+          Gimnasio de fuerza y superación. Entrená con disciplina,
+          constancia y un equipo que te acompaña a ser más fuerte cada día.
+        </p>
+      </div>
+
+      <div>
+        <h3>Links rápidos</h3>
+        <ul class="footer-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Redes</h3>
+        <ul class="footer-links">
+          <li><a href="https://instagram.com/powergym" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://facebook.com/powergym" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Horarios</h3>
+        <p>Lun a Vie: 6:00 – 23:00</p>
+        <p>Sábados: 8:00 – 20:00</p>
+        <p>Domingos: 9:00 – 14:00</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Power Gym. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
